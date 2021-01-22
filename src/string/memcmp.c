@@ -8,7 +8,7 @@
 }*/
 
 /* from kernel/lib/string.c*/
-/*int memcmp(const void *cs, const void *ct, size_t count)
+int memcmp(const void *cs, const void *ct, size_t count)
 {
 	const unsigned char *su1, *su2;
 	int res = 0;
@@ -17,8 +17,9 @@
 		if ((res = *su1 - *su2) != 0)
 			break;
 	return res;
-}*/
+}
 
+#if 0
 // From https://sourceware.org/git/?p=glibc.git;a=blob_plain;f=string/memcmp.c;h=81502873fc3afac7395fc9b3cd81d82adbcd7464;hb=HEAD
 /* Copyright (C) 1991-2020 Free Software Foundation, Inc.
    This file is part of the GNU C Library.
@@ -370,3 +371,4 @@ MEMCMP (const void *s1, const void *s2, size_t len)
 
   return 0;
 }
+#endif
